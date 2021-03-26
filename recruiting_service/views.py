@@ -67,8 +67,7 @@ class RecruitAnswer(generic.ListView):
         sith = self.kwargs.get('sith_id')
         check_shadowhand = ShadowHand.objects.filter(recruit_id = recruit).exists()
         count_shadowhands = ShadowHand.objects.filter(sith_id = sith).count()
-        print(count_shadowhands)
-        if check_shadowhand == False | count_shadowhands < 3:
+        if check_shadowhand == False:
             shadowhand = ShadowHand()
             shadowhand.recruit_id = recruit
             shadowhand.sith_id = sith
