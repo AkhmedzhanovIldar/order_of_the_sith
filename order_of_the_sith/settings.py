@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-import dj-database-url
+import dj_database_url
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'order_of_the_sith.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-db_from_env = dj-database-url.config()
+db_from_env = dj_database_url.config()
 DATABASE['default'].update(db_from_env)
 
 """
