@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3>Количество Рук Теней</h3>
+{% for shadowhand_count in shadowhand_counts %}
+    {% for sith in siths %}
+        {% if shadowhand_count.sith == sith.id %}
+            {{sith}} - Рук Тени: {{shadowhand_count.total}}
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+
+{% endblock %}

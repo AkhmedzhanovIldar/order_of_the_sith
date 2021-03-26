@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>Выберите рекрута</h3>
+<div class="list-group mt-4">
+    {% for recruit in recruits %}
+    <a href="{% url 'recruit-answers' sith_id recruit.id %}" class="list-group-item list-group-item-action">{{recruit}}</a>
+
+    {% endfor %}
+</div>
+{% endblock %}

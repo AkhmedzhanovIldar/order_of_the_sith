@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>Выберите рекрута</h3>
+<div class="list-group mt-4 mb-4">
+    {% for answer in answers %}
+    <li>Тест: {{answer.test}}. Вопрос: {{answer.question}}. Ответ: {{answer.variant}}</li>
+    {% endfor %}
+
+</div>
+
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-primary">Зачислить</button>
+</form>
+{% endblock %}

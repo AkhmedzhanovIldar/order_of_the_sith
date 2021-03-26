@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3>Выберите тест</h3>
+<div class="list-group mt-4">
+    {% for test in tests %}
+    <a href="{% url 'test' recruit_id test.id %}" class="list-group-item list-group-item-action">{{test}}</a>
+
+    {% endfor %}
+
+</div>
+{% endblock %}

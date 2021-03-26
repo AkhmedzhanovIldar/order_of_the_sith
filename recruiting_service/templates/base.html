@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+    {% if messages %}
+    {% for message in messages %}
+    {% if message.tags %}
+    <script>alert("{{ message }}")</script> {% endif %}
+    {% endfor %}
+    {% endif %}
+    <nav class="navbar navbar-light bg-light shadow mb-4">
+        <form class="container-fluid justify-content-start">
+            <a class="btn btn-outline-secondary m-2" href="{% url 'main' %}">Главная</a>
+            <a class="btn btn-outline-secondary m-2" href="{% url 'sith' %}">Для Ситхов</a>
+            <a class="btn btn-outline-secondary m-2" href="{% url 'recruit' %}">Для рекрутов</a>
+        </form>
+    </nav>
+    <div class="container w-90 p-4 shadow">
+        {% block content %}{% endblock %}
+    </div>
+</body>
