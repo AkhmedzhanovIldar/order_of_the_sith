@@ -17,9 +17,9 @@
     {% endif %}
     <nav class="navbar navbar-light bg-light shadow mb-4">
         <form class="container-fluid justify-content-start">
-            <a class="btn btn-outline-secondary m-2" href="{% url 'main' %}">Главная</a>
-            <a class="btn btn-outline-secondary m-2" href="{% url 'sith' %}">Для Ситхов</a>
-            <a class="btn btn-outline-secondary m-2" href="{% url 'recruit' %}">Для рекрутов</a>
+            <a class="btn btn-outline-secondary m-2" href="{% url 'recruiting_service:recruiting_service_main' %}">Главная</a>
+            <a class="btn btn-outline-secondary m-2" href="{% url 'recruiting_service:recruiting_service_sith_list' %}">Для Ситхов</a>
+            <a class="btn btn-outline-secondary m-2" href="{% url 'recruiting_service:recruiting_service_recruit_create' %}">Для рекрутов</a>
         </form>
     </nav>
     <div class="container w-90 p-4 shadow">

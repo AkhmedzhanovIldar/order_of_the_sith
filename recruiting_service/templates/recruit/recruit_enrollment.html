@@ -2,9 +2,9 @@
 
 {% block content %}
 
-<h3>Выберите рекрута</h3>
+<h3>Ответы рекрута на тест</h3>
 <div class="list-group mt-4 mb-4">
-    {% for answer in answers %}
+    {% for answer in recruit_answers %}
     <li>Тест: {{answer.test}}. Вопрос: {{answer.question}}. Ответ: {{answer.variant}}</li>
     {% endfor %}
 
